@@ -32,7 +32,7 @@ if any(k in ' '.join(sys.argv).lower() for k in ['upload', 'dist']):
         pass
     else:
         if current_commit and len(current_commit) == 40:
-            about['__keywords__'].append(current_commit[:8])
+            about['__keywords__'].append(str(current_commit[:8]))
 
 
 CLASSIFIERS = [
